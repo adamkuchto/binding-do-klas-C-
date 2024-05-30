@@ -1,0 +1,28 @@
+﻿<Window x:Class="binding_do_klas_C_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:binding_do_klas_C_"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListView Name="lvMediaItems" Margin="10">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Title" Width="120" DisplayMemberBinding="{Binding Title}" />
+                    <GridViewColumn Header="Director / Author" Width="120" DisplayMemberBinding="{Binding DirectorOrAuthor}" />
+                    <GridViewColumn Header="Publisher / Studio" Width="120" DisplayMemberBinding="{Binding PublisherOrStudio}" />
+                    <GridViewColumn Header="Medium" Width="120" DisplayMemberBinding="{Binding Medium}" />
+                    <GridViewColumn Header="Length" Width="120" DisplayMemberBinding="{Binding Length}" />
+                    <GridViewColumn Header="Release Date" Width="120" DisplayMemberBinding="{Binding ReleaseDate}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="10,275,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Edit" HorizontalAlignment="Left" Margin="90,275,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="170,275,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Import" HorizontalAlignment="Left" Margin="250,275,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Export" HorizontalAlignment="Left" Margin="330,275,0,0" VerticalAlignment="Top" Width="75"/>
+    </Grid>
+</Window>
